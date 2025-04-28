@@ -26,3 +26,30 @@ form.addEventListener('submit', (e) => {
   alert('Terima kasih atas konfirmasi Anda!');
   form.reset();
 });
+
+// Inisialisasi SwiperJS
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  effect: 'slide',
+});
+
+// Animasi smooth saat halaman dibuka
+window.addEventListener('load', () => {
+  document.querySelector('.hero h1').style.opacity = 0;
+  document.querySelector('.hero p').style.opacity = 0;
+
+  setTimeout(() => {
+    document.querySelector('.hero h1').style.transition = 'opacity 1s';
+    document.querySelector('.hero p').style.transition = 'opacity 1s';
+    document.querySelector('.hero h1').style.opacity = 1;
+    document.querySelector('.hero p').style.opacity = 1;
+  }, 500);
+});
