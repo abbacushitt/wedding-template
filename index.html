@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Syamsul & Noviyanti Wedding Day</title>
   <link rel="stylesheet" href="style.css">
+  <!-- SwiperJS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <audio autoplay loop hidden>
@@ -24,10 +26,15 @@
 
   <section id="galeri">
     <h2>Galeri Kami</h2>
-    <div class="gallery">
-      <img src="images/photo1.jpg" alt="Foto 1">
-      <img src="images/photo2.jpg" alt="Foto 2">
-      <img src="images/photo3.jpg" alt="Foto 3">
+    <!-- Swiper -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/photo1.jpg" alt="Foto 1"></div>
+        <div class="swiper-slide"><img src="images/photo2.jpg" alt="Foto 2"></div>
+        <div class="swiper-slide"><img src="images/photo3.jpg" alt="Foto 3"></div>
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -45,5 +52,7 @@
   </section>
 
   <script src="script.js"></script>
+  <!-- SwiperJS JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
